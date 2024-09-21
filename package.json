@@ -1,5 +1,5 @@
 {
-  "name": "optica-task",
+  "name": "optica-work",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "react": "^18.3.1",
+    "react-animations": "^1.0.0",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
