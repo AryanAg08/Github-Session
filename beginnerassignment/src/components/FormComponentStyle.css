@@ -1,0 +1,81 @@
+/* Centering the form wrapper vertically and horizontally */
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 50vh; /* Full viewport height */
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Styling for the form container (the box) */
+.form-container {
+    padding: 20px;
+    background-color: #333; /* Box background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px; /* Space between form and submitted data */
+}
+
+/* Form styling */
+.formstyle {
+    display: flex;
+    flex-direction: column;
+}
+
+.formstyle input {
+    background: linear-gradient(135deg, #000000, #515155, #000000);
+    animation: gradientBackground 45s ease infinite;
+    background-size: 400% 400%;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    color: #f8d6b4;
+    background-color: #333; /* Box background color */
+    box-sizing: border-box;
+}
+.formstyle button{
+    background: linear-gradient(135deg, #000000, #515155, #000000);
+    animation: gradientBackground 45s ease infinite;
+    background-size: 400% 400%;
+    margin: 10px 0;
+    padding: 8px;
+    width: 100%;
+    color: #f8d6b4;
+    background-color: #333; /* Box background color */
+    box-sizing: border-box;
+}
+
+/* List of submitted data */
+.liststyle{
+    margin-top: 20px;
+    width: 100%;
+    max-width: 440px;
+    padding: 20px;
+    background-color: #333; /* Box background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Box shadow for depth */
+    margin-bottom: 20px; /* Space between form and submitted data */
+    text-align: center;
+    color: #f8d6b4;
+    box-sizing: border-box;
+}
+.liststyle .vname {    
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Gap between columns */
+}
+
+/* Styling for submitted information */
+
+/* Ensure responsiveness */
+@media (max-width: 768px) {
+    .form-container, .liststyle {
+        max-width: 100%;
+    }
+}
+
