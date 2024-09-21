@@ -1,1 +1,0 @@
-Anurag Dwivedi
