@@ -1,0 +1,77 @@
+body {
+    margin: 20px;
+    padding: 20px;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+input[type="text"] {
+    width: 200px;
+    padding: 10px;
+    border: 2px solid #0575e6;
+    border-radius: 8px;
+    background-color: #0a0a0a;
+    color: white;
+    margin-bottom: 10px;
+    transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+    outline: none;
+    border-color: #00f260;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-image: linear-gradient(to left, #00f260, #0575e6);
+    height: 40px;
+    width: 100px;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+#show {
+    animation: fadeInUp 0.8s ease-in-out forwards;
+}
+.event {
+    animation: slideIn 0.6s ease-in-out forwards;
+    opacity: 0;
+}
+.event:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+.event:nth-child(2) {
+    animation-delay: 0.4s;
+}
