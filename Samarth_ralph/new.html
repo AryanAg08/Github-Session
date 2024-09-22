@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optica Core Team 2024</title>
+    <link rel="stylesheet" href="new.css">
+</head>
+<body>
+
+<h1>Optica Core Team 2024</h1>
+
+<form id="teamForm" onsubmit="event.preventDefault(); addMember();">
+    <label for="name">Name:</label>
+    <input type="text" id="name" class="txt" placeholder="Enter your Name" required>
+
+    <label for="designation">Designation:</label>
+    <input type="text" id="designation" class="txt1" placeholder="Enter your Designation" required>
+
+    <button type="submit">Submit</button>
+</form>
+
+<div class="team-list" id="teamList">
+    <h2>Team Members:</h2>
+</div>
+
+<script src="new.js"></script>
+
+</body>
+</html>
