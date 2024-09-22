@@ -1,0 +1,126 @@
+body
+{
+    background-image: url(dr5.jpg);
+    background-size: 140%;
+    background-repeat:repeat;
+    color:aliceblue;
+}
+
+h1{
+    font-size: 55px;
+    text-align: center;
+    font-family: monospace;
+    /* color:aliceblue; */
+    text-decoration: underline;
+    text-shadow: 2px 2px 3px rgb(135, 206, 250);
+}
+
+h2
+{
+    text-decoration: underline;
+    font-size: 20;
+}
+
+.container1{
+    display:flex;
+    justify-content: center;
+    gap: 10%;
+    font-family: monospace;
+    /* color:aliceblue; */
+    opacity: 70%;
+    /* border: 2px solid red; */
+}
+
+.container2
+{
+    font-family: monospace; 
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    text-shadow: 1px 1px 2px lightskyblue;
+}
+
+.animation img
+{
+    transition: transform 0.3s ease-in-out;
+}
+ 
+.animation img:hover
+{
+    transform: scale(1.05);
+    box-shadow: 3px 3px 6px aliceblue;
+}
+
+#JSCORP
+{
+    margin-left: 14%;
+    font-size:30;
+    font-family: monospace;
+    text-decoration: underline;
+    text-shadow: 2px 0px 1px aliceblue;
+}
+
+form{
+    display: flex;
+    gap: 20px;
+}
+
+.submit{
+    position: relative;
+    top: 73%;
+}
+#input:hover
+{
+    background-color: skyblue;
+    color: aliceblue;
+    transition: transform 0.2s ease-in-out;
+}
+#input:hover
+{
+    transform: scale(1.2);
+}
+
+.event1{
+    margin-left: 14%;
+}
+
+.event2
+{
+    margin-right: 15%;
+}
+
+.memberinput
+{
+    margin: 10px auto 10px;
+    position: relative;
+    /* left: 33%; */
+    /* display: flex; */
+    /* gap: 15px; */
+    /* border: 2px solid red; */
+    max-width: 37%;
+    justify-content: space-between;
+    font-family: monospace;
+    font-size: 15px;
+    text-shadow: 2px 0px 1px aliceblue;
+}
+
+.member_designation
+{
+    position: absolute;
+    left: 190px;
+}
+
+ol
+{
+    /* display: flex; */
+    justify-content: space-between;
+    /* gap: 80%; */
+    list-style: none;
+}
+
+li
+{
+    position: relative;
+    left: -20px;
+}
