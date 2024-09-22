@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Optica Core Team 2024 & JSCOP Events</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        form {
+            margin-bottom: 20px;
+        }
+
+        label, input {
+            display: block;
+            margin: 5px 0;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            padding: 5px 0;
+        }
+
+        .events {
+            margin-top: 30px;
+        }
+
+        .event-photo {
+            width: 200px;
+            height: 150px;
+            transition: transform 0.5s ease;
+        }
+
+        .event-photo:hover {
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Optica Core Team 2024</h2>
+
+    <!-- Input Form -->
+    <form id="teamForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        
+        <label for="designation">Designation:</label>
+        <input type="text" id="designation" required>
+        
+        <button type="submit">Submit</button>
+    </form>
+
+
+    <h3>Team Members:</h3>
+    <ul id="teamList">
+       
+    </ul>
+
+  
+    <div class="events">
+        <h2>JSCOP Events</h2>
+
+        <div class="event">
+            <h3>Event Name: Code Wars</h3>
+            
+            <img src="event1.jpeg" alt="Science Symposium" class="event-photo">
+        </div>
+
+        <div class="event">
+            <h3>Event Name: Electryfy Dash</h3>
+            <img src="event2.jpeg" alt="Optics Workshop" class="event-photo">
+        </div>
+    </div>
+
+    <script>
+  
+        const form = document.getElementById('teamForm');
+        const teamList = document.getElementById('teamList');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+          
+            const name = document.getElementById('name').value;
+            const designation = document.getElementById('designation').value;
+
+        
+            const li = document.createElement('li');
+            li.textContent = `${name} - ${designation}`;
+
+         
+            teamList.appendChild(li);
+
+       
+            form.reset();
+        });
+    </script>
+
+</body>
+</html>
