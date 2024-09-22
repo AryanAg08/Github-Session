@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+        Beginner's Assignment
+    </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <h1>BEGINNER'S ASSIGNMENT</h1>
+    <div class="container1">
+        <form>
+            <div id="nameField">
+                <h2 class="text1">Name:</h2>
+                <!-- Change the id to match JavaScript logic -->
+                <input type="text" name="name" placeholder="Enter your name" class="text1" id="nameInput">
+            </div>
+
+            <div id="designationField">
+                <h2 class="text1">Designation:</h2>
+                <!-- Change the id to match JavaScript logic -->
+                <input type="text" name="designation" placeholder="Enter your designation" class="text1" id="designationInput">
+            </div>
+        </form>
+
+        <div class="submit">
+            <button id="input" value="SUBMIT" onclick="DataEntry()" class="submit">ADD</button>
+        </div>
+    </div>
+
+    <div class="memberinput">
+        <ol id="memberList">
+            <!-- <li class="member">
+                <span class="member_name">Vishwas</span>
+                <span class="member_designation">Volunteer</span>
+            </li>
+            <li class="member">
+                <span class="member_name">Vishwas</span>
+                <span class="member_designation">Volunteer</span>
+            </li> -->
+        </ol>
+    </div>
+
+    <h2 id="JSCORP">JSCORP EVENTS:</h2>
+    <div class="container2">
+        <div class="event1">
+            <a href="https://jiitopticachapter.com/events" class="animation" target="_blank">
+                <img src="event1.jpg" alt="EVENT 1" width="300px">
+            </a>
+            <h2>CODE WARS:</h2>
+            <p>The Coding Carnival, hosted by Optica at JIIT Noida, promises to be a dynamic and engaging event for tech
+                enthusiasts. This coding competition invites participants to demonstrate their programming skills,
+                creativity, and problem-solving abilities. With a range of challenges that cater to various skill
+                levels, it provides a platform for both beginners and advanced coders to shine. The event will feature
+                exciting prizes, networking opportunities, and interactive workshops led by experts. Join us at JIIT
+                Noida to sharpen your coding knowledge, collaborate with like-minded peers, and experience the thrill of
+                competition in the tech world!</p>
+        </div>
+        <div class="event2">
+            <a href="https://jiitopticachapter.com/events" class="animation" target="_blank">
+                <img src="event2.webp" alt="EVENT 2" width="300px" height="389px">
+            </a>
+            <h2>CODE-HUB:</h2>
+            <p>Optica, in collaboration with JIIT Noida, is hosting an exciting coding event designed to ignite
+                innovation and problem-solving skills among students. Participants will engage in competitive
+                programming challenges, tackling real-world problems through coding and algorithm development. The event
+                will offer multiple rounds, testing participants' expertise in languages like Python, C++, and Java.
+                With experienced mentors and tech enthusiasts leading the way, students will have the opportunity to
+                sharpen their technical skills, collaborate with peers, and win exciting prizes. This event is an
+                excellent platform for showcasing talent and fostering a thriving coding culture at JIIT Noida.</p>
+        </div>
+    </div>
+
+    <script>
+        function DataEntry() {
+            let name = document.getElementById("nameInput").value;
+            let designation = document.getElementById("designationInput").value;
+
+            if (name && designation) {
+                let li = document.createElement("li");
+                li.classList.add("member");
+
+                let nameSpan = document.createElement("span");
+                nameSpan.classList.add("member_name");
+                nameSpan.textContent = name;
+
+                let designationSpan = document.createElement("span");
+                designationSpan.classList.add("member_designation");
+                designationSpan.textContent = designation;
+
+                li.appendChild(nameSpan);
+                li.appendChild(document.createTextNode(" "));
+                li.appendChild(designationSpan);
+
+                document.getElementById("memberList").appendChild(li);
+
+                document.getElementById("nameInput").value = '';
+                document.getElementById("designationInput").value = '';
+            } else {
+                alert("Please enter both name and designation!");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
