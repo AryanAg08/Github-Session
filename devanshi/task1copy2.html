@@ -1,0 +1,131 @@
+<!doctype html>
+<html>
+<head>
+    <title>OPTICA FORM</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; 
+            margin: 0; 
+            text-align: center; 
+            background: url('space.jpg') no-repeat center center fixed;
+            background-size: cover;
+            animation: moveBackground 20s linear infinite;
+        }
+
+        @keyframes moveBackground {
+            0% {
+                background-position: 0% 0%;
+            }
+            100% {
+                background-position: 100% 100%;
+            }
+        }
+
+        table {
+            border: 4px solid black;
+            border-collapse: collapse;
+            background: rgba(255, 255, 255, 0.5);
+            margin: 20px; 
+            width: 80%; 
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+            color: black;
+        }
+
+        #output {
+            margin-top: 20px; 
+        }
+
+        img {
+            width: 150px; 
+            animation: fadeIn 5s infinite;
+        }
+
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+            }
+            100% {
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <form name="optica_form">
+        <table>
+            <tr>
+                <td>Enter your name</td>
+                <td><input id="name" type="text" name="name" value=""></td>
+            </tr>
+            <tr>
+                <td>Enter your Designation</td>
+                <td>
+                    <select id="designation" name="designation" multiple size="4">
+                        <option value="Advisor">Advisor</option>
+                        <option value="Core team member">Core Team Member</option>
+                        <option value="Volunteer">Volunteer</option>
+                        <option value="Not from optica">Not from Optica</option>
+                    </select>
+                </td>
+            </tr>
+        </table>
+        <button type="button" onclick="display()">Submit</button>
+    </form>
+    
+    <div id="output"></div>
+    
+    <script>
+        function display() {
+            const name = document.getElementById("name").value;
+            const dS = document.getElementById("designation");
+            const designation = Array.from(dS.selectedOptions).map(option => option.value).join(", ");
+            let designationDisplay;
+            if (designation.includes("Not from optica")) {
+                designationDisplay = "JOIN It!!";
+            } else {
+                designationDisplay = designation;
+            }
+            
+            const userHtml = `
+                <table>
+                    <tr><th>User Details</th></tr>
+                    <tr><td><strong>Name:</strong> ${name}</td></tr>
+                    <tr><td><strong>Designation:</strong> ${designationDisplay}</td></tr>
+                </table>
+            `;
+            
+            const coreTeamHtml = `
+                <table>
+                    <tr><th>Core Team Details</th></tr>
+                    <tr><td><strong>TECHNICAL HEAD:</strong> Aryan Goyal</td></tr>
+                    <tr><td><strong>WEB MASTER:</strong> Rajat Bhati</td></tr>
+                    <tr><td><strong>PRESIDENT:</strong> Shantanu Pandey</td></tr>
+                    <tr><td><strong>VICE PRESIDENT:</strong> Sai Raj Singh</td></tr>
+                </table>
+            `;
+            
+            const eventsHtml = `
+                <table>
+                    <tr><th>JSCOP EVENTS</th></tr>
+                    <tr><td><strong>CODE WARS</strong></td></tr>
+                    <tr><td><strong>DESCRIPTION:</strong> Join Code Wars with your team of 1-3 players to conquer coding challenges and control planets. Compete in rounds, outsmart opponents, and avoid elimination to win glory in this thrilling coding competition. Are you ready to lead?</td></tr>
+                    <tr><td><img src="code-wars.jpeg" alt="Code Wars"></td></tr>
+                    <tr><td><strong>PHOTONICS</strong></td></tr>
+                    <tr><td><strong>DESCRIPTION:</strong> Join "Photonics," an event celebrating the beauty of light in nature! Capture stunning moments, from auroras to rainbows, using your camera. Every photo reveals the magic of science and art, turning ordinary scenes into extraordinary wonders.</td></tr>
+                    <tr><td><img src="rr.jpeg" alt="Photonics"></td></tr>
+                </table>
+            `;
+
+            document.getElementById("output").innerHTML = userHtml + coreTeamHtml + eventsHtml; 
+        }
+    </script>
+</body>
+</html>
