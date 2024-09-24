@@ -1,0 +1,41 @@
+body{
+    background-color:rgb(73, 71, 73);
+    color: rgb(88, 88, 238);
+}
+h1{
+    text-align: center;
+    color: rgb(27, 27, 250);
+    font-weight: 1200;
+}
+.descrip {
+     color: rgb(238, 32, 101);
+     font-size: large;
+     font-weight: 1000;
+
+}
+h2{
+    color: rgb(27, 27, 250);
+    font-weight: 1200;
+}
+.events{
+    text-align: center;
+}
+.event{
+    text-align: center;
+    
+    font-size: large;
+    
+}
+h3{
+    color: antiquewhite;
+}
+button:hover{
+ background: beige;
+ background-color: bisque;
+ padding: 23px,48px;
+
+}
+.event img{
+    width:500px;
+    padding: 40px;
+}
