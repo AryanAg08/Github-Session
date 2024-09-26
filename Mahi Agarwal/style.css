@@ -1,0 +1,49 @@
+*{
+    color: black;
+}
+.logo1{
+    height: 50px;
+    margin-right: 20px;
+}
+.logo2{
+    height: 50px;
+}
+.navbar{
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+body{
+    background-color: #F5F5F5;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: space-around;
+}
+h3{
+    margin-top: 0;
+    margin-bottom: 8px;
+}
+.glass{
+    font-size: larger;
+}
+#submit{
+    font-size: 16px;
+    margin-top: 20px;
+    background-color: lightgrey;
+    /* background-color: #FFFAFA; */
+}
+.input{
+    border-radius: 5px;
+    padding-left: 5px;
+    width: 375px;
+    height: 30px;
+}
